@@ -1,0 +1,11 @@
+rails new ajax_admin_survey_test -d postgresql
+cd ajax_admin_survey_test
+git init
+git add .
+git commit -m "clean rails"
+git remote add origin https://github.com/PaulNoe/ajax_admin_survey_test.git
+git push -u origin master
+subl .
+rails g scaffold Post title:string content:text
+rake db:create
+rake db:migrate
