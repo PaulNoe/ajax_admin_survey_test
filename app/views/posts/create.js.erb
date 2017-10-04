@@ -1,1 +1,9 @@
-alert("Post created with ajax");
+//hide modal
+$("#newpost").modal('hide');
+//empty fields
+$(".post_title").val('');
+$(".post_content").val('');
+//add element at beggining... j; render through js.
+$("#container_posts").prepend('<%= j render @post %>');
+//get post, hide then fade in
+$("#post_<%= @post.id %>").hide().fadeIn(1000);
